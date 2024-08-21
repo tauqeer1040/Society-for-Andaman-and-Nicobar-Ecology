@@ -32,3 +32,29 @@ const swiper = new Swiper('.swiper', {
       },
   });
   
+
+  const imgElements = document.getElementsByTagName("img");
+  const videoElements = document.getElementsByTagName("video");
+  
+  // Convert NodeList to an array using Array.from()
+  const revealEl = Array.from(imgElements).concat(Array.from(videoElements));
+  
+  revealEl.forEach(element => {
+    element.classList.add("reveal");
+  });
+
+
+ScrollReveal({ duration: 900, reset: true }).reveal('.reveal', {distance: '20px'});
+
+// function getRandomDirection() {
+//     const directions = ['top', 'bottom', 'left', 'right'];
+//     return directions[Math.floor(Math.random() * directions.length)];
+// }
+
+// ScrollReveal().reveal('.reveal-element', {
+//     origin: getRandomDirection(),
+//     distance: '50px', // Customize the distance of the reveal
+//     duration: 900,   // Customize the duration of the animation
+//     easing: 'ease-in-out',
+//     reset: true,      // Reset animation on scroll up
+// });
