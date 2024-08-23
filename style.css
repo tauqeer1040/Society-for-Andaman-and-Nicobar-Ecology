@@ -56,6 +56,9 @@ p {
 
 #logo {
   border-radius: 50%;
+  max-width: 75vw;
+  margin: auto;
+  height: auto;
 }
 
 #title {
@@ -89,6 +92,7 @@ p {
 
 .workBox {
   height: 100%;
+  max-height: 30vh;
   display: flex;
   justify-content: center;
   /* height: fit-content; */
@@ -106,7 +110,7 @@ p {
 }
 .flex {
   padding: 0 1rem 0 1rem;
-  text-align: right;
+  text-align: center;
 }
 
 .map{
@@ -120,16 +124,16 @@ p {
 /* position: absolute; */
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
   /* border-radius: 2rem; */
   transform-origin: left; /* Set the origin of the transform */
   /* transform: scale(.9) ;  */
   /* Zoom and shift the image */
    transition: transform 0.3s ease;  
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 800px) {
   .map> img{
-    /* transform: scale(1) translateX(10%); */
+   object-fit: contain;
   }
 }
 
