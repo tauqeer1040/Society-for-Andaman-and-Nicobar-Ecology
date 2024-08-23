@@ -41,20 +41,14 @@ const swiper = new Swiper('.swiper', {
   
   revealEl.forEach(element => {
     element.classList.add("reveal");
+    element.classList.add(".data-scroll");
   });
 
 
-ScrollReveal({ duration: 900, reset: true }).reveal('.reveal', {distance: '20px'});
+// ScrollReveal({ duration: 900, reset: true }).reveal('.reveal', {distance: '20px'});
 
-// function getRandomDirection() {
-//     const directions = ['top', 'bottom', 'left', 'right'];
-//     return directions[Math.floor(Math.random() * directions.length)];
-// }
-
-// ScrollReveal().reveal('.reveal-element', {
-//     origin: getRandomDirection(),
-//     distance: '50px', // Customize the distance of the reveal
-//     duration: 900,   // Customize the duration of the animation
-//     easing: 'ease-in-out',
-//     reset: true,      // Reset animation on scroll up
+// const scroll = new LocomotiveScroll({
+//   el: revealEl,
+//   // smooth: true,
+//   direction: "vertical"
 // });
