@@ -23,14 +23,14 @@
 
 
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    autoplay: {
-        delay: 1500,
-      },
-  });
+// const swiper = new Swiper('.swiper', {
+//     // Optional parameters
+//     direction: 'horizontal',
+//     loop: true,
+//     autoplay: {
+//         delay: 1500,
+//       },
+//   });
   
 
   const imgElements = document.getElementsByTagName("img");
@@ -41,11 +41,11 @@ const swiper = new Swiper('.swiper', {
   
   revealEl.forEach(element => {
     element.classList.add("reveal");
-    element.classList.add(".data-scroll");
+    // element.classList.add(".data-scroll");
   });
 
 
-// ScrollReveal({ duration: 900, reset: true }).reveal('.reveal', {distance: '20px'});
+ScrollReveal({ duration: 900, reset: true }).reveal('.reveal', {distance: '20px'});
 
 // const scroll = new LocomotiveScroll({
 //   el: revealEl,
